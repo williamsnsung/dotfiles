@@ -73,6 +73,7 @@ vim.pack.add({
   'https://github.com/lewis6991/gitsigns.nvim',
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/stevearc/conform.nvim',
+  'https://github.com/MeanderingProgrammer/render-markdown.nvim',
 })
 
 -- Helper: safely call plugin.setup(), silently skip if not yet installed
@@ -95,6 +96,7 @@ vim.keymap.set('n', '<leader>fr', function() require('fzf-lua').lsp_references()
 setup('mini.completion')
 setup('quicker')
 setup('gitsigns')
+setup('render-markdown')
 
 -- ── treesitter ─────────────────────────────────────────────────────
 vim.api.nvim_create_autocmd('FileType', {
@@ -109,6 +111,7 @@ setup('conform', {
   formatters_by_ft = {
     rust   = { 'rustfmt' },
     python = { 'ruff_fix', 'ruff_organize_imports', 'ruff_format' },
+    markdown = { 'mdformat' },
   },
   format_on_save = {
     timeout_ms = 500,
