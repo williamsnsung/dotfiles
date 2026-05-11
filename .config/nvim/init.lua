@@ -74,6 +74,7 @@ vim.pack.add({
   'https://github.com/nvim-treesitter/nvim-treesitter',
   'https://github.com/stevearc/conform.nvim',
   'https://github.com/MeanderingProgrammer/render-markdown.nvim',
+  'https://github.com/folke/which-key.nvim',
 })
 
 -- Helper: safely call plugin.setup(), silently skip if not yet installed
@@ -97,6 +98,7 @@ setup('mini.completion')
 setup('quicker')
 setup('gitsigns')
 setup('render-markdown')
+setup('which-key')
 
 -- ── treesitter ─────────────────────────────────────────────────────
 vim.api.nvim_create_autocmd('FileType', {

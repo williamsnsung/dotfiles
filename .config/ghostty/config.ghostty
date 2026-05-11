@@ -1,3 +1,4 @@
 theme = Arcoiris
 font-family = CommitMono Nerd Font
+macos-option-as-alt = true
 
